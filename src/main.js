@@ -30,3 +30,17 @@ window
     .matchMedia("(prefers-color-scheme: dark)")
     .addEventListener("change", matchTheme);
 matchTheme(window.matchMedia("(prefers-color-scheme: dark)"));
+
+// Card Body AutoResizer
+const resizer = () => {
+    document.querySelectorAll(".el-card").forEach((el) => {
+        const height = el.clientHeight;
+        el.querySelector(".el-card__body").style.height = `${
+            height - el.querySelector(".el-card__header").clientHeight - 40
+        }px`;
+    });
+};
+resizer();
+window.addEventListener("resize", (_e) => {
+    resizer();
+});

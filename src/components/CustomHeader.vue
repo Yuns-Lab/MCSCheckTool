@@ -8,9 +8,9 @@ const rea = reactive({
 // Theme Change Detector
 const matchTheme = (e) => {
     if (e.matches) {
-        rea.theme = "dark";
-    } else {
         rea.theme = "light";
+    } else {
+        rea.theme = "dark";
     }
 };
 window
@@ -55,7 +55,7 @@ const openissue = () => {
                 :effect="rea.theme"
                 content="反馈"
                 placement="bottom-start">
-                <el-icon size="32" @click="opengh()">
+                <el-icon size="32" @click="openissue()">
                     <Service />
                 </el-icon>
             </el-tooltip>

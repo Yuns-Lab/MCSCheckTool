@@ -1,4 +1,6 @@
 body {
     margin: 0;
     inset: 0;
+    user-select: none;
+    max-height: 100vh;
 }
